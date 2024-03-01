@@ -34,7 +34,7 @@ with open('model_params.pkl', 'rb') as f:
     logprior, loglikelihood = pickle.load(f)
 
 def main():
-    st.title('Sentiment Analysis App')
+    st.title('Sentiment Analysis Using Naive Bayes')
 
     tweet = st.text_input('Enter your tweet:')
 
@@ -44,9 +44,9 @@ def main():
         print(sentiment)
         # st.write(f'Tweet sentiment: {sentiment}')
         if sentiment>0 :
-            st.write(f'Tweet sentiment: Positive Tweet')
+            st.write(f'Tweet sentiment: Positive Tweet with the loglikelihood of {sentiment} ')
         else:
-            st.write(f'Tweet sentiment: Negative Tweet')
+            st.write(f'Tweet sentiment: Negative Tweet with the loglikelihood of {sentiment}')
 
 
 if __name__ == '__main__':
